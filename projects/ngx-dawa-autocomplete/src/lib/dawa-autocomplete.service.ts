@@ -5,6 +5,7 @@ import { of, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export class DawaAutocompleteItem {
+    id: string;
     text: string;
     door: string;
     floor: string;
@@ -42,6 +43,7 @@ export class DawaAutocompleteService {
     private mapToAutocompleteItem(items: any[]): DawaAutocompleteItem[] {
         return items.map(item => {
             return {
+                id: item.id,
                 text: item.tekst,
                 door: item.adresse['dør'],
                 floor: item.adresse['etage'],
