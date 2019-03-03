@@ -43,7 +43,7 @@ export class DawaAutocompleteService {
     private mapToAutocompleteItem(items: any[]): DawaAutocompleteItem[] {
         return items.map(item => {
             return {
-                id: item.id,
+                id: item.adresse['id'],
                 text: item.tekst,
                 door: item.adresse['dør'],
                 floor: item.adresse['etage'],
